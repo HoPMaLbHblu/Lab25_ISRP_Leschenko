@@ -550,7 +550,7 @@ const emptyResponse = {};
 const defaultLanguage = emptyResponse?.data?.user?.profile?.settings?.language ?? "en";
 console.log("Язык по умолчанию:", defaultLanguage);
 */
-
+/*
 const order = {
     id: 101,
     customer: {
@@ -578,3 +578,4 @@ function displayOrder(order) {
 }
 
 displayOrder(order);
+*/

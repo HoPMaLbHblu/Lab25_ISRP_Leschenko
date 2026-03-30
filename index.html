@@ -12,7 +12,29 @@
     <div class="container">
         <h1>Lab24-26 - Modern JavaScript</h1>
         <h2>Современный JavaScript</h2>
+
+        <h1>Конвертер валют</h1>
+
+        <div class="form">
+            <label>Сумма:</label>
+            <input type="number" id="amount" placeholder="Введите сумму" />
+
+            <label>Валюта:</label>
+            <select id="currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="RUB">RUB</option>
+            </select>
+
+            <button id="convertBtn">Конвертировать</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
     </div>
+
+
+    <script src="js/main.js"></script>
     <script type="module" src="js/api.js"></script>
 
 </body>
