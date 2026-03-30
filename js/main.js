@@ -603,5 +603,5 @@ convertBtn.addEventListener("click", function () {
     const amount = Number(amountStr);
     const rate = rates[currency];
     const converted = (amount * rates[currency]).toFixed(2);
-
+    resultDiv.textContent = `${amount} ${currency} ≈ ${converted} USD`;
 });
