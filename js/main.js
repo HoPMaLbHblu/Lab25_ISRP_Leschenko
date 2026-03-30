@@ -579,3 +579,29 @@ function displayOrder(order) {
 
 displayOrder(order);
 */
+
+const amountInput = document.getElementById("amount");
+const currencySelect = document.getElementById("currency");
+const convertBtn = document.getElementById("convertBtn");
+const resultDiv = document.getElementById("result");
+
+const rates = {
+    USD: 1,
+    EUR: 1.18,
+    RUB: 0.012
+};
+
+convertBtn.addEventListener("click", function () {
+    const amountStr = amountInput.value.trim();
+    const currency = currencySelect.value;
+
+    if (!amountStr || isNaN(amountStr)) {
+        resultDiv.textContent = "Введите корректную сумму.";
+        return;
+    }
+
+    const amount = Number(amountStr);
+    const rate = rates[currency];
+    const converted = (amount * rates[currency]).toFixed(2);
+
+});
