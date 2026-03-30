@@ -313,7 +313,7 @@ async function cookDinnerFast() {
 
 cookDinnerFast().then((result) => console.log(result));
 */
-
+/*
 function checkAvailability(product) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -369,3 +369,73 @@ async function processOrder(product) {
 }
 
 processOrder("salad");
+*/
+
+/*
+
+console.log("Fetch API");
+
+async function getUsers() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        if (!response.ok) {
+            throw new Error(`HTTP ошибка! Статус: ${response.status}`);
+        }
+        const users = await response.json();
+        console.log("Первые 3 пользователя:");
+        users.slice(0, 3).forEach(user => {
+            console.log(`- ${user.name} (${user.email})`);
+        });
+
+    } catch (error) {
+        console.log("Ошибка при загрузке пользователя:", error.message);
+    }
+}
+getUsers();
+
+*/
+/*
+async function getUserById(id) {
+    try {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+        const user = await response.json();
+
+        console.log(`Пользователь #${id}:`);
+        console.log(`Имя: ${user.name}`);
+        console.log(`Город: ${user.address.city}`);
+        console.log(`Компания: ${user.company.name}`);
+
+    } catch (error) {
+        console.log("Ошибка:", error.message);
+    }
+}
+getUserById(1);
+*/
+/*
+async function createPost() {
+    try {
+        const newPost = {
+            title: "Моя первая запись",
+            body: "Это содержание моей первой записи в блоге",
+            userId: 1,
+        };
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPost),
+        });
+
+        const createdPost = await response.json();
+        console.log("Создана новая запись:");
+        console.log("ID:", createdPost.id)
+        console.log("Заголовок:", createdPost.title);
+    } catch (error) {
+        console.log("Ошибка при создании записи:", error.message);
+    }
+}
+
+createPost();
+*/
+
